@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nova AI</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================
+     SIDEBAR
+======================================= -->
+
+<aside
+    class="sidebar"
+    id="sidebar"
+>
+
+    <div class="sidebar-header">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✦
+            </div>
+
+            <span>
+                Nova AI
+            </span>
+
+        </div>
+
+
+        <button
+            class="close-sidebar"
+            id="closeSidebar"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <button
+        class="new-chat"
+        id="newChatBtn"
+    >
+
+        <span>＋</span>
+
+        New Chat
+
+    </button>
+
+
+    <div class="history-container">
+
+        <div class="history-title">
+
+            Recent Chats
+
+        </div>
+
+
+        <div
+            id="chatHistory"
+            class="chat-history"
+        ></div>
+
+    </div>
+
+
+    <div class="sidebar-bottom">
+
+        <button
+            class="sidebar-button"
+            id="themeBtn"
+        >
+
+            <span id="themeIcon">
+                🌙
+            </span>
+
+            <span id="themeText">
+                Dark Mode
+            </span>
+
+        </button>
+
+
+        <div class="profile">
+
+            <div class="profile-avatar">
+                B
+            </div>
+
+            <div>
+
+                <strong>
+                    Balaji
+                </strong>
+
+                <small>
+                    Nova AI User
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- ======================================
+     MOBILE OVERLAY
+======================================= -->
+
+<div
+    class="overlay"
+    id="overlay"
+></div>
+
+
+<!-- ======================================
+     MAIN
+======================================= -->
+
+<main class="main">
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <button
+            class="menu-button"
+            id="menuBtn"
+        >
+            ☰
+        </button>
+
+
+        <div class="top-title">
+
+            <div>
+
+                <h2>
+                    Nova AI
+                </h2>
+
+                <div class="status">
+
+                    <span></span>
+
+                    Online
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <button
+                id="clearBtn"
+                title="Clear current chat"
+            >
+                🗑
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================
+         CHAT AREA
+    =================================== -->
+
+    <section
+        class="chat-area"
+        id="chatArea"
+    >
+
+
+        <!-- WELCOME -->
+
+        <div
+            class="welcome"
+            id="welcome"
+        >
+
+
+            <!-- ROBOT -->
+
+            <div class="robot-wrapper">
+
+                <div class="robot">
+
+                    <div class="antenna">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="robot-head">
+
+                        <div class="ear left"></div>
+
+                        <div class="ear right"></div>
+
+
+                        <div class="robot-face">
+
+                            <div class="eyes">
+
+                                <span></span>
+
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="robot-mouth"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="robot-body">
+
+                        <div class="chest-light"></div>
+
+                        <div class="chest-lines">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h1>
+                How can I help you?
+            </h1>
+
+
+            <p>
+                Ask Nova AI anything. Learn, code,
+                create, analyze, brainstorm and explore.
+            </p>
+
+
+            <!-- SUGGESTIONS -->
+
+            <div class="suggestions">
+
+
+                <button
+                    class="suggestion"
+                    data-prompt="Explain JavaScript to me like I am a beginner."
+                >
+
+                    <span>💻</span>
+
+                    <div>
+
+                        <strong>
+                            Learn JavaScript
+                        </strong>
+
+                        <small>
+                            Beginner explanation
+                        </small>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="suggestion"
+                    data-prompt="Give me 5 unique software engineering project ideas for my portfolio."
+                >
+
+                    <span>🚀</span>
+
+                    <div>
+
+                        <strong>
+                            Project Ideas
+                        </strong>
+
+                        <small>
+                            Build your portfolio
+                        </small>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="suggestion"
+                    data-prompt="Create a DSA roadmap for a student preparing for product-based software engineering companies."
+                >
+
+                    <span>🧠</span>
+
+                    <div>
+
+                        <strong>
+                            Learn DSA
+                        </strong>
+
+                        <small>
+                            Create a roadmap
+                        </small>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="suggestion"
+                    data-prompt="Help me prepare for a software engineering internship interview."
+                >
+
+                    <span>🎯</span>
+
+                    <div>
+
+                        <strong>
+                            Interview Prep
+                        </strong>
+
+                        <small>
+                            Software engineering
+                        </small>
+
+                    </div>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGES -->
+
+        <div
+            id="messages"
+            class="messages"
+        ></div>
+
+
+    </section>
+
+
+    <!-- ==================================
+         INPUT
+    =================================== -->
+
+    <div class="input-area">
+
+
+        <div class="input-box">
+
+
+            <textarea
+                id="messageInput"
+                placeholder="Message Nova AI..."
+                rows="1"
+            ></textarea>
+
+
+            <button
+                id="sendBtn"
+                class="send-button"
+                title="Send"
+            >
+                ➤
+            </button>
+
+
+        </div>
+
+
+        <div class="input-footer">
+
+            Nova AI can make mistakes.
+            Check important information.
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
